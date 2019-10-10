@@ -1,0 +1,33 @@
+.pub-header {
+  position: absolute;
+  width: 100%;
+  height: 88px;
+  top: 0;
+  background: #5cc9f7;
+  text-align: center;
+  font-size: 32px;
+  color: #fff;
+  line-height: 88px; }
+  .pub-header-user {
+    width: 90px;
+    height: 64px;
+    position: absolute;
+    top: 12px;
+    left: 31px; }
+    .pub-header-user img {
+      width: 100%; }
+  .pub-header-opa {
+    width: 140px;
+    height: 100%;
+    line-height: 37px;
+    position: absolute;
+    top: 26px;
+    right: 38px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between; }
+    .pub-header-opa .iconfont {
+      font-size: 37px; }
+    .pub-header-opa span {
+      height: 100%;
+      padding: 0 10px; }
