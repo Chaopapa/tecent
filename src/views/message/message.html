@@ -1,46 +1,68 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 minimum-scale=0.5, maximum-scale=0.5, user-scalable=no">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0 minimum-scale=0.5, maximum-scale=0.5, user-scalable=no"
+    />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>消息列表</title>
     <script src="../../utils/flexible.js"></script>
-    <link rel="stylesheet" href="../../css/reset.css">
-    <link rel="stylesheet" href="./main/main.css">
-    <link rel="stylesheet" href="../../components/header/header.css">
-</head>
-<body>
+    <link rel="stylesheet" href="../../css/reset.css" />
+    <link rel="stylesheet" href="../../components/refreshLoad/myscroll.css" />
+    <link rel="stylesheet" href="./main/main.css" />
+    <link rel="stylesheet" href="../../components/header/header.css" />
+    <link rel="stylesheet" href="../../components/bottom/bottom.css" />
+    <link rel="stylesheet" href="../../css/font/iconfont.css" />
+  </head>
+  <body>
     <!-- 公共头部 -->
-    <header class="header">
-        <div class="pub-header">
-            <a class="pub-header-user">
-                <img src="../../asserts/header-user.png" alt="">
-            </a>
-            <span>消息</span>
-            <p class="pub-header-opa">
-                <span class="iconfont">+</span>
-                <span class="iconfont">机</span>
-            </p>
-        </div>
+    <header class="pub-header">
+      <a class="pub-header-user">
+        <img src="../../asserts/header-user.png" alt="" />
+      </a>
+      <span>消息</span>
+      <p class="pub-header-opa">
+        <span class="iconfont icon-add"></span>
+        <span class="iconfont icon-xiangji"></span>
+      </p>
     </header>
-    <main  class="message-main">
-        <div class="message-main-wrap">
-            <ul>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-            </ul>
-        </div>
+    <main class="message-main">
+      <div class="message-main-wrap">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
     </main>
     <!-- 公共底部 -->
-    <footer class="footer">
-        <div class="pub-footer">
-            
-        </div>
+    <footer class="pub-bottom">
+      <!--    
+        <a href="">
+          <span class="iconfont icon-message"></span>
+          <span>消息</span>
+        </a>
+        <a href="">
+          <span class="iconfont icon-lianxiren"></span>
+          <span>联系人</span>
+        </a>
+        <a href="">
+          <span class="iconfont icon-see"></span>
+          <span>看点</span>
+        </a>
+        <a href="">
+          <span class="iconfont icon-xianxing_xingqiu"></span>
+          <span>动态</span>
+        </a> -->
     </footer>
     <script src="../../lib/zepto.js"></script>
+    <script src="../../components/refreshLoad/iscroll-probe.js"></script>
+    <script src="../../components/refreshLoad/myscroll.js"></script>
     <script src="main/main.js"></script>
-</body>
+    <script src="../../components/header/header.js"></script>
+    <script src="../../components/bottom/bottom.js"></script>
+  </body>
 </html>
