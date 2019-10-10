@@ -1,0 +1,25 @@
+.myScroll-flash {
+  height: 50px;
+  text-align: center;
+  line-height: 50px; }
+  .myScroll-flash img {
+    width: .4rem;
+    vertical-align: middle;
+    animation: 1s list-refresh infinite linear; }
+
+.myScroll-load {
+  height: 50px;
+  text-align: center;
+  line-height: 50px; }
+  .myScroll-load img {
+    width: .4rem;
+    vertical-align: middle;
+    animation: 1s list-refresh infinite linear; }
+
+@keyframes list-refresh {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
+/*# sourceMappingURL=myscroll.css.map */
