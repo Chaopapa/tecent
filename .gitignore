@@ -1,0 +1,14 @@
+## .gitignore 忽略文件列表
+node_modules/
+/dist/
+jquery-1.8.3/
+
+##
+.idea
+.vscode
+.wmv
+node_modules/
+dist
+build
+package-lock.json
+.psd
