@@ -8,19 +8,15 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>消息列表</title>
-    <script src="../../utils/flexible.js"></script>
-    <link rel="stylesheet" href="../../css/reset.css" />
-    <link rel="stylesheet" href="../../components/refreshLoad/myscroll.css" />
-    <link rel="stylesheet" href="./main/main.css" />
-    <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/bottom/bottom.css" />
-    <link rel="stylesheet" href="../../css/font/iconfont.css" />
+    <script src="../js/flexible.js"></script>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/message.css">
   </head>
   <body>
     <!-- 公共头部 -->
     <header class="pub-header">
       <a class="pub-header-user">
-        <img src="../../asserts/header-user.png" alt="" />
+        <img src="../asserts/header-user.png" alt="" />
       </a>
       <span>消息</span>
       <p class="pub-header-opa">
@@ -31,39 +27,24 @@
     <main class="message-main">
       <div class="message-main-wrap">
         <div class="myScroll-flash">
-          <img src="" alt="">
+          <img src="../asserts/refresh.png" alt="">
         </div>
         <div class="message-main-search">
           <input type="text" placeholder="搜索">
         </div>
         <ul>
-          <!-- <li>
-           <img src="../../asserts/message.jpg" alt="">
-           <div class="message-item-main">
-             <h3>猛hi</h3>
-             <p>我上树了XXXXXXXXXXXXXXXXXXXXccccXXXXXXXXXXXXXXXXX</p>
-           </div>
-          <div class="message-item-info">
-            <span class="message-item-info-time">16:13</span>
-            <span  class="message-item-info-count">1</span>
-          </div>
-          </li> -->
         </ul>
         <div class="myScroll-load">
-            <img src="" alt="">
+            <img src="../asserts/load.png" alt="">
           </div>
       </div>
     </main>
     <!-- 公共底部 -->
     <footer class="pub-bottom">
     </footer>
-    <script src="../../lib/zepto.js"></script>
-    <script src="../../lib/iscroll-probe.js"></script>
-    <script src="../../utils/api.js"></script>
-    <script src="../../components/refreshLoad/myscroll.js"></script>
-  
-    <script src="../../components/header/header.js"></script>
-    <script src="../../components/bottom/bottom.js"></script>
-    <script src="./main/main.js"></script>
+    <script src="../lib/zepto.js"></script>
+    <script src="../lib/iscroll-probe.js"></script>
+    <script src="../lib/fastclick.js"></script>
+    <script src="../js/message.js"></script>
   </body>
 </html>

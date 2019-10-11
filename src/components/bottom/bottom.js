@@ -30,16 +30,16 @@
       id: "message",
       icon: "icon-message",
       text: "消息",
-      href: "../message/message.html"
+      href: "./message.html"
     },
     {
       id: "chatPeople",
       icon: "icon-lianxiren",
       text: "联系人",
-      href: "../chatPeople/chatPeople.html"
+      href: "./chatPeople.html"
     },
 
-    { id: "see", icon: "icon-see", text: "看点", href: "../see/see.html" },
+    { id: "see", icon: "icon-see", text: "看点", href: "./see.html" },
 
     { id: "activity", icon: "icon-xianxing_xingqiu", text: "动态", href: "../activity/activity.html" }
   ];
