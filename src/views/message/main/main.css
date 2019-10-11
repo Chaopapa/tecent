@@ -1,0 +1,72 @@
+.message-main {
+  position: absolute;
+  width: 100%;
+  top: 88px;
+  bottom: 112px;
+  overflow: hidden;
+  background: #f5f6fa; }
+  .message-main-search {
+    height: 1.20rem;
+    background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .message-main-search input {
+      border: 0;
+      outline: none;
+      background: #fff;
+      width: 5.86rem;
+      height: .72rem;
+      border-radius: .72rem;
+      padding-left: 2.92rem;
+      box-sizing: border-box;
+      font-size: .30rem;
+      color: #b1b3be; }
+  .message-main ul li {
+    height: 1.44rem;
+    background: #fff;
+    padding: 0 .31rem;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center; }
+    .message-main ul li img {
+      width: 1.04rem;
+      height: 1.04rem; }
+    .message-main ul li .message-item-main {
+      flex: 1;
+      display: flex;
+      margin-left: .22rem;
+      justify-content: space-around;
+      flex-direction: column; }
+      .message-main ul li .message-item-main-top {
+        display: flex;
+        justify-content: space-between; }
+        .message-main ul li .message-item-main-top h3 {
+          flex: 1;
+          font-size: .32rem;
+          color: #040819; }
+        .message-main ul li .message-item-main-top span {
+          width: .60rem;
+          font-size: 10rem;
+          color: #abadb8;
+          font-size: .22rem; }
+      .message-main ul li .message-item-main-bottom {
+        display: flex;
+        justify-content: space-between; }
+        .message-main ul li .message-item-main-bottom span {
+          width: .40rem;
+          height: .40rem;
+          text-align: center;
+          line-height: .40rem;
+          color: #fff;
+          background: #e4593f;
+          font-size: .20rem;
+          border-radius: 50%; }
+        .message-main ul li .message-item-main-bottom p {
+          flex: 1;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: .26rem;
+          color: #a4a6b1; }
