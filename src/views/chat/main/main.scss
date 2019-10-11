@@ -1,0 +1,110 @@
+.chat-header{
+    position: absolute;;
+    width: 100%;
+    height: 88px;
+    top:0;
+    background: #d4d4d4;
+    position: relative;
+    color: rgb(31, 13, 13);
+    &-content{
+        text-align: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h3{
+            font-size: 32px;
+            
+        }
+        p{
+            font-size: 20px;
+        }      
+    }
+    &-left{
+        width: 86px;
+        height: 100%;
+        position: absolute;
+        left:33px;
+        top: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        p{
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            background: #c4c1c6;
+            border-radius: 50%;
+            font-size: 20px;
+        }
+
+        .iconfont{
+            font-size: 36px;
+        }
+    }
+
+    &-right{
+        width: 104px;
+        height: 100%;
+        position: absolute;
+        right:41px;
+        top: 0;
+        display: flex;
+        justify-content: space-between; 
+        line-height: 88px;
+        .iconfont{
+            font-size: 30px;
+        }
+        span{
+            height: 100%;
+            padding: 0 10px;
+        }
+    }
+}
+.chat-main{
+    
+}
+
+.chat-bottom{
+    position: absolute;
+    height: 188px;
+    width: 100%;
+    bottom: 0;
+    background: #d3d3d7;
+    overflow: hidden;
+    &-ipt{
+        margin-top:16px;
+        height: 73px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        input{
+            width: 710px;
+            height: 100%;
+            border: 0;
+            outline: none;
+            padding: 0 41px;
+            box-sizing: border-box;
+            font-size: 30px;
+            color: #1a1a1a;
+            background: #fff;
+            border-radius: 73px; 
+        }
+    }
+
+    ul{
+        height: 98px;
+        display: flex;
+        align-items: center;
+        padding-left:66px;
+        box-sizing: border-box;
+        color: #999eb2;
+        li{
+            flex: 1;
+            .iconfont{
+                font-size: 45px;
+            }
+        }
+    }
+}
