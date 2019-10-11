@@ -1,3 +1,3 @@
-var host = "http://127.0.0.1:8081";
+var host = "http://127.0.0.1:8082";
 
-var HOME_LIST = "/api/job/list";
+var MESSAGE_LIST_API = host+'/api/message/list';

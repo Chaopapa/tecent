@@ -1,90 +1,107 @@
-.message-main{
-    position: absolute;
-    width: 100%;
-    top: 88px;
-    bottom: 112px;
-    overflow: hidden;
+.message-main {
+  position: absolute;
+  width: 100%;
+  top: 88px;
+  bottom: 112px;
+  overflow: hidden;
+  background: #f5f6fa;
+  &-search {
+    height: 1.2rem;
     background: #f5f6fa;
-    &-search{
-        height: 1.20rem;
-        background: #f5f6fa;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      border: 0;
+      outline: none;
+      background: #fff;
+      width: 5.86rem;
+      height: 0.72rem;
+      border-radius: 0.72rem;
+      padding-left: 2.92rem;
+      box-sizing: border-box;
+      font-size: 0.3rem;
+      color: #b1b3be;
+    }
+  }
+  ul {
+    li {
+      height: 1.44rem;
+      background: #fff;
+      padding: 0 0.31rem;
+      box-sizing: border-box;
+      display: flex;
+      align-items: center;
+      img {
+        width: 1.04rem;
+        height: 1.04rem;
+      }
+
+      .message-item-main {
+        width: 4.01rem;
+        height: 1.05rem;
         display: flex;
-        justify-content: center;
-        align-items: center;
-
-        input{
-            border: 0;
-            outline: none;
-            background: #fff;
-            width: 5.86rem;
-            height: .72rem;
-            border-radius: .72rem;
-            padding-left:2.92rem;
-            box-sizing: border-box;
-            font-size: .30rem;
-            color:#b1b3be;
+        margin-left: 0.22rem;
+        justify-content: space-around;
+        flex-direction: column;
+        // &-top{
+        //     display: flex;
+        //     justify-content: space-between;
+        h3 {
+          font-size: 0.32rem;
+          color: #040819;
         }
-    }
-    ul{
-
-        li{
-            height: 1.44rem;
-            background: #fff;
-            padding: 0 .31rem;
-            box-sizing: border-box;
-            display: flex;
-            align-items: center;
-            img{
-                width: 1.04rem;
-                height: 1.04rem;
-            }
-
-            .message-item-main{
-                flex: 1;
-                display: flex;
-                margin-left:.22rem;
-                justify-content: space-around;
-                flex-direction: column;
-                &-top{
-                    display: flex;
-                    justify-content: space-between;
-                    h3{
-                        flex: 1;
-                        font-size: .32rem;
-                        color:#040819;
-                    }
-                    span{
-                        width: .60rem;
-                        font-size: 10rem;
-                        color:#abadb8;
-                        font-size: .22rem;
-                    }
-                }
-
-                &-bottom{
-                    display: flex;
-                    justify-content: space-between;
-                    span{
-                        width: .40rem;
-                        height: .40rem;
-                        text-align: center;
-                        line-height: .40rem;
-                        color:#fff;
-                        background: #e4593f;
-                        font-size: .20rem;
-                        border-radius: 50%;
-                    }
-                    p {
-                        flex: 1;
-                        overflow:hidden;
-                        white-space: nowrap;
-                        text-overflow: ellipsis;
-                        overflow: hidden;
-                        font-size: .26rem;
-                        color:#a4a6b1;
-                    }
-                }
-            }
+        p {
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          font-size: 0.26rem;
+          color: #a4a6b1;
         }
+        // span{
+        //     width: .92rem;
+        //     font-size: 10rem;
+        //     color:#abadb8;
+        //     font-size: .22rem;
+        // }
+
+        // &-bottom{
+        //     display: flex;
+        //     justify-content: space-between;
+        //     span{
+        //         width: .40rem;
+        //         height: .40rem;
+        //         text-align: center;
+        //         line-height: .40rem;
+        //         color:#fff;
+        //         background: #e4593f;
+        //         font-size: .20rem;
+        //         border-radius: 50%;
+        //     }
+      }
+      .message-item-info {
+        display: flex;
+        height: 1.05rem;
+        width: 0.6rem;
+        justify-content: space-around;
+        flex-direction: column;
+        &-time {
+          color: #abadb8;
+          font-size: 0.22rem;
+        }
+        &-count {
+          width: 0.4rem;
+          height: 0.4rem;
+          text-align: center;
+          line-height: 0.4rem;
+          color: #fff;
+          background: #e4593f;
+          font-size: 0.2rem;
+          border-radius: 50%;
+          align-self: flex-end;
+        }
+      }
     }
+  }
 }

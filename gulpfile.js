@@ -13,7 +13,9 @@ const server = function() {
         directoryListing: true, //是否文件夹列表
         open: true, //打开浏览器
         // 中间件,拦截请求
-        middleware: require("../data/mockDataMiddleware")
+        middleware: require("./data/mockDataMiddleware")
       })
     );
 };
+
+exports.server = server;

@@ -6,7 +6,7 @@
   overflow: hidden;
   background: #f5f6fa; }
   .message-main-search {
-    height: 1.20rem;
+    height: 1.2rem;
     background: #f5f6fa;
     display: flex;
     justify-content: center;
@@ -16,16 +16,16 @@
       outline: none;
       background: #fff;
       width: 5.86rem;
-      height: .72rem;
-      border-radius: .72rem;
+      height: 0.72rem;
+      border-radius: 0.72rem;
       padding-left: 2.92rem;
       box-sizing: border-box;
-      font-size: .30rem;
+      font-size: 0.3rem;
       color: #b1b3be; }
   .message-main ul li {
     height: 1.44rem;
     background: #fff;
-    padding: 0 .31rem;
+    padding: 0 0.31rem;
     box-sizing: border-box;
     display: flex;
     align-items: center; }
@@ -33,40 +33,37 @@
       width: 1.04rem;
       height: 1.04rem; }
     .message-main ul li .message-item-main {
-      flex: 1;
+      width: 4.01rem;
+      height: 1.05rem;
       display: flex;
-      margin-left: .22rem;
+      margin-left: 0.22rem;
       justify-content: space-around;
       flex-direction: column; }
-      .message-main ul li .message-item-main-top {
-        display: flex;
-        justify-content: space-between; }
-        .message-main ul li .message-item-main-top h3 {
-          flex: 1;
-          font-size: .32rem;
-          color: #040819; }
-        .message-main ul li .message-item-main-top span {
-          width: .60rem;
-          font-size: 10rem;
-          color: #abadb8;
-          font-size: .22rem; }
-      .message-main ul li .message-item-main-bottom {
-        display: flex;
-        justify-content: space-between; }
-        .message-main ul li .message-item-main-bottom span {
-          width: .40rem;
-          height: .40rem;
-          text-align: center;
-          line-height: .40rem;
-          color: #fff;
-          background: #e4593f;
-          font-size: .20rem;
-          border-radius: 50%; }
-        .message-main ul li .message-item-main-bottom p {
-          flex: 1;
-          overflow: hidden;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
-          font-size: .26rem;
-          color: #a4a6b1; }
+      .message-main ul li .message-item-main h3 {
+        font-size: 0.32rem;
+        color: #040819; }
+      .message-main ul li .message-item-main p {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        font-size: 0.26rem;
+        color: #a4a6b1; }
+    .message-main ul li .message-item-info {
+      display: flex;
+      height: 1.05rem;
+      width: 0.6rem;
+      justify-content: space-around;
+      flex-direction: column; }
+      .message-main ul li .message-item-info-time {
+        color: #abadb8;
+        font-size: 0.22rem; }
+      .message-main ul li .message-item-info-count {
+        width: 0.4rem;
+        height: 0.4rem;
+        text-align: center;
+        line-height: 0.4rem;
+        color: #fff;
+        background: #e4593f;
+        font-size: 0.2rem;
+        border-radius: 50%;
+        align-self: flex-end; }
