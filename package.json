@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-     "build": "set NODE_ENV=production && gulp",
+    "build": "set NODE_ENV=production && gulp",
     "start": "set NODE_ENV=development && gulp"
   },
   "repository": {
@@ -19,13 +19,16 @@
   },
   "homepage": "https://github.com/Chaopapa/tecent#readme",
   "devDependencies": {
+    "express": "^4.17.1",
     "gulp": "^4.0.2",
-    "gulp-webserver": "^0.9.1",
-    "mockjs": "^1.0.1-beta3",
-	  "gulp-concat": "^2.6.1",
+    "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^6.1.1",
     "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",
-    "gulp-uglify": "^3.0.2"
+    "gulp-uglify": "^3.0.2",
+    "gulp-webserver": "^0.9.1",
+    "mockjs": "^1.0.1-beta3",
+    "socket.io": "^2.3.0",
+    "ws": "^7.1.2"
   }
 }
