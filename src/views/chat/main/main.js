@@ -19,7 +19,7 @@
     window.WebSocket = window.MozWebSocket;
   }
   if (window.WebSocket) {
-    socket = new WebSocket("ws://localhost:8080/ws");
+    socket = new WebSocket("ws://localhost:8080/ws?userId=1&api=login");
     socket.onmessage = function(event) {
       var ta = document.getElementById("responseText");
     //   ta.value = ta.value + "\n" + event.data;

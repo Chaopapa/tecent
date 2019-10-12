@@ -53,7 +53,7 @@ const handleJS = (cb) => {
     let value =item[1];
     src(value)
     .pipe(concat(`${key}.js`))
-    .pipe(uglify())
+    // .pipe(uglify())
     .pipe(dest('./dist/js'));
   })
   // 结束任务
