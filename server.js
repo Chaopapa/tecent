@@ -78,7 +78,7 @@ function opaDatabase(curd) {
     database: "tecent"
   });
 
-  if(!connection){
+  if (!connection) {
     console.log("连接失败");
     return;
   }
@@ -102,7 +102,9 @@ function opaRequest(url, ws) {
     case "register":
       register(paramObject, ws);
       break;
-
+    case "userSearch":
+      userSearch(paramObject, ws);
+      break;
     default:
       ws.send("请求地址不存在");
       break;
@@ -127,7 +129,7 @@ function login(paramObject, ws) {
           resCode: 5000,
           resMsg: "服务器错误"
         };
-       
+
         ws.send(JSON.stringify(result));
         return;
       }
@@ -171,7 +173,8 @@ function register(paramObject, ws) {
         ws.send(JSON.stringify(data));
         return;
       }
-      if (result.affectedRows>0) {//受影响行数大于1
+      if (result.affectedRows > 0) {
+        //受影响行数大于1
         var data = {
           resCode: 0000,
           resMsg: "操作成功",
@@ -189,6 +192,50 @@ function register(paramObject, ws) {
     });
   });
 }
+
+/**
+ * 用户查找接口
+ * @param {*} paramObject
+ * @param {*} ws
+ */
+function userSearch(paramObject, ws) {
+  var username = paramObject.targetName;
+  var sql = `select * from biz_user where username="${username}"`;
+
+  opaDatabase(function() {
+    connection.query(sql, function(err, result) {
+      if (err) {
+        var data = {
+          resCode: 5000,
+          resMsg: "服务器错误"
+        };
+        console.log(err);
+        ws.send(JSON.stringify(data));
+        return;
+      }
+
+      if (result.length) {
+        var data = {
+          resCode: 0000,
+          resMsg: "操作成功",
+          data: {
+            user: {
+              nickName:result[0].nick_name,
+              username:result[0].username
+            }
+          }
+        };
+      } else {
+        var data = {
+          resCode: 1111,
+          resMsg: "操作失败"
+        };
+      }
+      ws.send(JSON.stringify(data));
+    });
+  });
+}
+
 /**
  * 加好友
  * @param {*} paramObject

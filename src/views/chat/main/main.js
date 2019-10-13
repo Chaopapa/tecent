@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   //监听键盘事件，回车发送消息
   $(".chat-bottom-ipt input").on("keyup", function(event) {
     if (event.keyCode == "13") {
