@@ -221,7 +221,8 @@ function userSearch(paramObject, ws) {
           data: {
             user: {
               nickName:result[0].nick_name,
-              username:result[0].username
+              username:result[0].username,
+              userId:result[0].id
             }
           }
         };
@@ -242,3 +243,12 @@ function userSearch(paramObject, ws) {
  * @param {*} ws
  */
 function addFriend(paramObject, ws) {}
+
+/**
+ * 发消息接口
+ * @param {*} paramObject 
+ * @param {*} ws 
+ */
+function sendMessage(paramObject,ws){
+
+}

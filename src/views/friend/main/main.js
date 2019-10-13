@@ -12,7 +12,7 @@
         socket.onmessage = function(event) {
             var dataJSON= JSON.parse(event.data);
             if(dataJSON.resCode=='0000'){//请求成功并返回数据
-                location.href = './people.html?nickName='+dataJSON.data.user.nickName+'&username='+dataJSON.data.user.username;
+                location.href = './people.html?nickName='+dataJSON.data.user.nickName+'&username='+dataJSON.data.user.username+'&userId='+dataJSON.data.user.userId;
             }else{
                 alert("未找到对应用户");
                 $('.friend-search input').val('');

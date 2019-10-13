@@ -11,4 +11,9 @@
     console.log(paramsObject);
     $('.username').text("QQ:"+paramsObject.username);
     $('.nickName').text(paramsObject.nickName);
+
+    //跳转发消息页面
+    $('.send-message').on('click',function(){
+        location.href = './chat.html';
+    });
 })()
