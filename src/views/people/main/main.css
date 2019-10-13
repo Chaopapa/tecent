@@ -1,0 +1,108 @@
+.people-bg {
+  height: 380px;
+  background: url("../asserts/bg.JPG") no-repeat 0 -500px;
+  overflow: hidden; }
+  .people-bg-header {
+    height: 40px;
+    padding: 0 40px;
+    color: #fff;
+    font-size: 30px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40px; }
+    .people-bg-header .iconfont {
+      font-size: 40px; }
+    .people-bg-header-right {
+      width: 153px;
+      height: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center; }
+
+.people-user {
+  height: 702px;
+  position: absolute;
+  width: 100%;
+  top: 284px;
+  padding: 0 35px 0 28px;
+  box-sizing: border-box; }
+  .people-user-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .people-user-header img {
+      width: 188px; }
+    .people-user-header-info {
+      flex: 1;
+      height: 158px;
+      margin-left: 30px;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: column; }
+      .people-user-header-info .people-user-name {
+        font-size: 44px;
+        color: #fff; }
+      .people-user-header-info span {
+        font-size: 24px;
+        color: #03081b; }
+        .people-user-header-info span:nth-of-type(1) {
+          margin-top: 20px; }
+    .people-user-header-up {
+      width: 60px;
+      height: 100%;
+      color: #fff;
+      font-size: 18px;
+      align-self: flex-start;
+      text-align: center; }
+      .people-user-header-up .iconfont {
+        font-size: 40px; }
+  .people-user-list {
+    margin-top: 60px;
+    font-size: 26px; }
+    .people-user-list li {
+      height: 53px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 18px; }
+      .people-user-list li .iconfont:nth-of-type(1) {
+        font-size: 32px;
+        color: #989eb4; }
+      .people-user-list li .iconfont:nth-of-type(2) {
+        font-size: 22px;
+        color: #b0b2bf; }
+      .people-user-list li p {
+        flex: 1;
+        margin-left: 32px; }
+      .people-user-list li:nth-last-of-type(2) {
+        justify-content: flex-start; }
+      .people-user-list li:nth-last-of-type(1) {
+        justify-content: space-between;
+        padding: 0 72px;
+        height: 142px; }
+        .people-user-list li:nth-last-of-type(1) img {
+          width: 142px; }
+
+.people-footer {
+  height: 120px;
+  position: absolute;
+  width: 100%;
+  padding: 0 34px;
+  bottom: 0;
+  background: #f3f2f0;
+  display: flex;
+  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between; }
+  .people-footer a {
+    width: 220px;
+    height: 90px;
+    text-align: center;
+    line-height: 90px;
+    font-size: 32px;
+    background: #eaedf4;
+    color: #03081b;
+    border-radius: 6px; }
+  .people-footer .send-message {
+    color: #fff;
+    background: #00cafc; }
