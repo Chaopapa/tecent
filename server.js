@@ -29,13 +29,13 @@ server.on("connection", function(ws, req, res) {
 
   ws.on("message", function(message) {
     console.log("received: %s from %s", message, clientName);
-    
+
     // 广播消息给所有客户端
     server.clients.forEach(function each(client) {
       if (client.readyState === WebSocket.OPEN) {
         console.log(client);
         client.send(clientName + " -> " + message);
-        ws.send('哈个鬼');
+        ws.send("哈个鬼");
       }
     });
   });
@@ -76,6 +76,12 @@ function opaDatabase(curd) {
     password: "cc123456",
     database: "tecent"
   });
+
+  if(!connection){
+    console.log("连接失败");
+    return;
+  }
+
   console.log("---------连接成功----------");
   curd();
   connection.end(); //关闭连接,防止内存的泄露
@@ -91,6 +97,11 @@ function opaRequest(url, ws) {
     case "login":
       login(paramObject, ws);
       break;
+
+    case "register":
+      register(paramObject, ws);
+      break;
+
     default:
       ws.send("请求地址不存在");
       break;
@@ -99,8 +110,8 @@ function opaRequest(url, ws) {
 /* ****************API接口********************** */
 /**
  * 登录接口
- * @param {*} paramObject 
- * @param {*} ws 
+ * @param {*} paramObject
+ * @param {*} ws
  */
 function login(paramObject, ws) {
   var username = paramObject.username;
@@ -115,14 +126,15 @@ function login(paramObject, ws) {
           resCode: 5000,
           resMsg: "服务器错误"
         };
-         ws.send(JSON.stringify(result));
+       
+        ws.send(JSON.stringify(result));
         return;
       }
       if (result.length) {
         var data = {
           resCode: 0000,
           resMsg: "操作成功",
-          data:{
+          data: {
             user: result[0]
           }
         };
@@ -137,10 +149,48 @@ function login(paramObject, ws) {
   });
 }
 /**
- * 加好友
- * @param {*} paramObject 
- * @param {*} ws 
+ * 注册
+ * @param {*} paramObject
+ * @param {*} ws
  */
-function addFriend(paramObject,ws){
+function register(paramObject, ws) {
+  var username = paramObject.username;
+  var password = paramObject.password;
+  var nickName = paramObject.nickName;
 
+  var sql = `insert into biz_user(username,password,nick_name) values("${username}","${password}","${nickName}")`;
+  opaDatabase(function() {
+    connection.query(sql, function(err, result) {
+      if (err) {
+        var data = {
+          resCode: 5000,
+          resMsg: "服务器错误"
+        };
+        console.log(err);
+        ws.send(JSON.stringify(data));
+        return;
+      }
+      if (result.affectedRows>0) {//受影响行数大于1
+        var data = {
+          resCode: 0000,
+          resMsg: "操作成功",
+          data: {
+            userId: result.insertId
+          }
+        };
+      } else {
+        var data = {
+          resCode: 1111,
+          resMsg: "操作失败"
+        };
+      }
+      ws.send(JSON.stringify(data));
+    });
+  });
 }
+/**
+ * 加好友
+ * @param {*} paramObject
+ * @param {*} ws
+ */
+function addFriend(paramObject, ws) {}
