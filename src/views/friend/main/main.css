@@ -20,7 +20,7 @@ body {
   position: absolute;
   width: 100%;
   top: 88px;
-  padding: 0 189px;
+  padding: 0 189px; 
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
