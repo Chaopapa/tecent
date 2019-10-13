@@ -1,6 +1,9 @@
 ;(function(){
     $('.go-back').on('click',function(){
-        alert();
         window.history.back();
+    });
+
+    $('.friend').on('click',function(){
+        window.location.href='./friend.html';
     })
 })()
