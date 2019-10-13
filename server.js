@@ -15,7 +15,8 @@ server.on("close", function() {
   console.log("closed");
 });
 
-server.on("connection", function(ws, req, res) {
+server.on("connection", function(ws, req) {
+  console.log(ws);
   //处理请求
   opaRequest(req.url, ws);
   const ip = req.connection.remoteAddress;

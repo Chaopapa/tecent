@@ -1,6 +1,5 @@
 ## .gitignore 忽略文件列表
 node_modules/
-/dist/
 jquery-1.8.3/
 
 ##

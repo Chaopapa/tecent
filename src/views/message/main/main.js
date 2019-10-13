@@ -1,4 +1,4 @@
-(function() {
+;(function() {
     var listBox = $('.message-main ul')
   var messageList = new MyScroll(".message-main", {
     click: true,

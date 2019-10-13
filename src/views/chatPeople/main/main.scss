@@ -1,0 +1,154 @@
+.chatPeople-main {
+  position: absolute;
+  width: 100%;
+  top: 88px;
+  bottom: 112px;
+  background: #f5f6f9;
+  overflow: hidden;
+  &-search {
+    height: 1.2rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+      border: 0;
+      outline: none;
+      background: #f5f6f9;
+      width: 5.86rem;
+      height: 0.72rem;
+      border-radius: 0.72rem;
+      padding-left: 2.92rem;
+      box-sizing: border-box;
+      font-size: 0.3rem;
+      color: #b1b3be;
+    }
+  }
+  &-header {
+    height: 3.3rem;
+    background: #fff;
+    padding-left: 0.32rem;
+    & > p {
+      height: 1.03rem;
+      line-height: 1.03rem;
+      color: #b2b4bf;
+      font-size: 0.21rem;
+      .iconfont {
+        font-size: 0.21rem;
+      }
+    }
+    li {
+      padding-right: 0.35rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 0.8rem;
+      margin: 0.24rem 0;
+      img {
+        width: 0.81rem;
+      }
+      & > div {
+        flex: 1;
+        height: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0.24rem;
+        h3 {
+          font-size: 0.28rem;
+          color: #040819;
+          font-weight: normal;
+        }
+        p {
+          font-size: 0.20rem;
+          color: #878b97;
+        }
+      }
+      & > p {
+        width: 1.73rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+          width: 1.2rem;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          border-radius: 0.6rem;
+          text-align: center;
+          color: #040819;
+          background: #ebecf4;
+          font-size: 0.26rem;
+        }
+        span {
+          color: #b0b3be;
+          font-size: 0.18rem;
+        }
+      }
+    }
+  }
+
+  &-new {
+    padding: 0 0.32rem;
+    height: 1.11rem;
+    margin: 0.24rem 0;
+    background: #fff;
+    font-size: 0.35rem;
+    color: #040819;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .iconfont {
+      font-size: 0.23rem;
+      color: #b0b3be;
+    }
+  }
+
+  &-list {
+    position: absolute;
+    width: 100%;
+    top: 6.09rem;
+    bottom: 0;
+  
+    overflow: hidden;
+    ul {
+        padding: .3rem 0;
+        background: #fff;
+      li {
+        height: 0.8rem;
+        display: flex;
+        padding: 0 0.32rem;
+        margin-bottom:.40rem;
+        img {
+          width: 0.8rem;
+        }
+
+        & > div {
+          flex: 1;
+          height: .68rem;
+          margin-left: 0.24rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          h3 {
+            font-size: 0.28rem;
+            color: #040819;
+            font-weight: normal;
+          }
+          p {
+            font-size: 0.20rem;
+            color: #878b97;
+
+          }
+        }
+      }
+    }
+  }
+
+  .myScroll-load{
+      font-size: .28rem;
+      color: #b1b3be;
+      background: #fff;;
+  }
+}

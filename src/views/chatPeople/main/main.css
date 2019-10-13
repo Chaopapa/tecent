@@ -1,0 +1,122 @@
+.chatPeople-main {
+  position: absolute;
+  width: 100%;
+  top: 88px;
+  bottom: 112px;
+  background: #f5f6f9;
+  overflow: hidden; }
+  .chatPeople-main-search {
+    height: 1.2rem;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .chatPeople-main-search input {
+      border: 0;
+      outline: none;
+      background: #f5f6f9;
+      width: 5.86rem;
+      height: 0.72rem;
+      border-radius: 0.72rem;
+      padding-left: 2.92rem;
+      box-sizing: border-box;
+      font-size: 0.3rem;
+      color: #b1b3be; }
+  .chatPeople-main-header {
+    height: 3.3rem;
+    background: #fff;
+    padding-left: 0.32rem; }
+    .chatPeople-main-header > p {
+      height: 1.03rem;
+      line-height: 1.03rem;
+      color: #b2b4bf;
+      font-size: 0.21rem; }
+      .chatPeople-main-header > p .iconfont {
+        font-size: 0.21rem; }
+    .chatPeople-main-header li {
+      padding-right: 0.35rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 0.8rem;
+      margin: 0.24rem 0; }
+      .chatPeople-main-header li img {
+        width: 0.81rem; }
+      .chatPeople-main-header li > div {
+        flex: 1;
+        height: 0.7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 0.24rem; }
+        .chatPeople-main-header li > div h3 {
+          font-size: 0.28rem;
+          color: #040819;
+          font-weight: normal; }
+        .chatPeople-main-header li > div p {
+          font-size: 0.20rem;
+          color: #878b97; }
+      .chatPeople-main-header li > p {
+        width: 1.73rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center; }
+        .chatPeople-main-header li > p a {
+          width: 1.2rem;
+          height: 0.6rem;
+          line-height: 0.6rem;
+          border-radius: 0.6rem;
+          text-align: center;
+          color: #040819;
+          background: #ebecf4;
+          font-size: 0.26rem; }
+        .chatPeople-main-header li > p span {
+          color: #b0b3be;
+          font-size: 0.18rem; }
+  .chatPeople-main-new {
+    padding: 0 0.32rem;
+    height: 1.11rem;
+    margin: 0.24rem 0;
+    background: #fff;
+    font-size: 0.35rem;
+    color: #040819;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .chatPeople-main-new .iconfont {
+      font-size: 0.23rem;
+      color: #b0b3be; }
+  .chatPeople-main-list {
+    position: absolute;
+    width: 100%;
+    top: 6.09rem;
+    bottom: 0;
+    overflow: hidden; }
+    .chatPeople-main-list ul {
+      padding: .3rem 0;
+      background: #fff; }
+      .chatPeople-main-list ul li {
+        height: 0.8rem;
+        display: flex;
+        padding: 0 0.32rem;
+        margin-bottom: .40rem; }
+        .chatPeople-main-list ul li img {
+          width: 0.8rem; }
+        .chatPeople-main-list ul li > div {
+          flex: 1;
+          height: .68rem;
+          margin-left: 0.24rem;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          .chatPeople-main-list ul li > div h3 {
+            font-size: 0.28rem;
+            color: #040819;
+            font-weight: normal; }
+          .chatPeople-main-list ul li > div p {
+            font-size: 0.20rem;
+            color: #878b97; }
+  .chatPeople-main .myScroll-load {
+    font-size: .28rem;
+    color: #b1b3be;
+    background: #fff; }

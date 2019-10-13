@@ -8,23 +8,116 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-    <script src="../../utils/flexible.js"></script>
-    <link rel="stylesheet" href="../../css/reset.css" />
-    <link rel="stylesheet" href="../../components/refreshLoad/myscroll.css" />
-    <link rel="stylesheet" href="./main/main.css" />
-    <link rel="stylesheet" href="../../components/header/header.css" />
-    <link rel="stylesheet" href="../../components/bottom/bottom.css" />
-    <link rel="stylesheet" href="../../css/font/iconfont.css" />
+    <script src="../js/flexible.js"></script>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/chatPeople.css" />
   </head>
   <body>
-    <header class="pub-header"></header>
+    <!-- 公共头部 -->
+    <header class="pub-header">
+      <a class="pub-header-user">
+        <img src="../asserts/header-user.png" alt="" />
+      </a>
+      <span>联系人</span>
+      <p class="pub-header-opa">
+        <span class="iconfont icon-add"></span>
+      </p>
+    </header>
+    <main class="chatPeople-main">
+      <div class="chatPeople-main-search">
+        <input type="text" placeholder="搜索" />
+      </div>
+      <ul class="chatPeople-main-header">
+        <p>
+          可能认识的人
+          <span class="iconfont icon-go"></span>
+        </p>
+        <li class="chatPeople-main-header-item">
+          <img src="../asserts/awang.jpg" alt="" />
+          <div>
+            <h3>阿旺—L</h3>
+            <p>1位共同好友</p>
+          </div>
+          <p>
+            <a href="">添加</a>
+            <span>X</span>
+          </p>
+        </li>
+        <li class="chatPeople-main-header-item">
+          <img src="../asserts/laotao.jpg" alt="" />
+          <div>
+            <h3>a-[那木炫]灬</h3>
+            <p>来自群： SZ-HTML5</p>
+          </div>
+          <p>
+            <a href="">添加</a>
+            <span>X</span>
+          </p>
+        </li>
+      </ul>
+      <div class="chatPeople-main-new">
+        <span>新朋友</span>
+        <span class="iconfont icon-go"></span>
+      </div>
+      <div class="chatPeople-main-list">
+        <div class="chatPeople-main-list-wrap">
+          <div class="myScroll-flash">
+
+          </div>
+          <ul>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+            <li>
+              <img src="../asserts/laotao.jpg" alt="" />
+              <div class="">
+                <h3>猛hi</h3>
+                <p>[电脑在线]</p>
+              </div>
+            </li>
+          </ul>
+          <div class="myScroll-load">
+            没有更多了
+          </div>
+        </div>
+      </div>
+    </main>
     <footer class="pub-bottom"></footer>
 
-    <script src="../../lib/zepto.js"></script>
-    <script src="../../components/refreshLoad/iscroll-probe.js"></script>
-    <script src="../../components/refreshLoad/myscroll.js"></script>
-    <script src="main/main.js"></script>
-    <script src="../../components/header/header.js"></script>
-    <script src="../../components/bottom/bottom.js"></script>
+    <script src="../lib/zepto.js"></script>
+    <script src="../lib/iscroll-probe.js"></script>
+    <script src="../js/chatPeople.js"></script>
   </body>
 </html>

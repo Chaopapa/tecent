@@ -1,4 +1,4 @@
-(function() {
+;(function() {
   function initTabBar(list) {
     var template =
       ' <a href="{{href}}" class="{{active}}">\
@@ -45,4 +45,4 @@
   ];
 
   initTabBar(data);
-})();
+})()
