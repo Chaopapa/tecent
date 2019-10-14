@@ -4,7 +4,7 @@ var path = require("path");
 
 var server = http.createServer();
 
-server.listen(8080, err => {
+server.listen(8081, err => {
   if (err) {
     console.log("启动失败");
   } else {
@@ -25,7 +25,7 @@ server.on("request", function(req, res) {
 
   if (ext === ".html") {
     res.setHeader("Content-Type", "text/html; charset=utf-8");
-    fs.createReadStream("./dist" +url).pipe(res);
+    fs.createReadStream("./dist/views" +url).pipe(res);
 
   } else if (index= pictureArr.indexOf(ext.toLocaleLowerCase()) >=0) {//图片资源
     console.log("---------图片资源------------");
@@ -48,6 +48,9 @@ server.on("request", function(req, res) {
   }else if(ext.indexOf('.')==-1&&url!="/"){//访问路径后缀不含有点，表示访问html
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     fs.createReadStream("./dist/views" +url+'.html').pipe(res);
+  }else if(ext.indexOf(".html")>=0){
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    fs.createReadStream("./dist/views" +url.split("?")[0]).pipe(res);
   }
   // req.parse(req.url);
 });
