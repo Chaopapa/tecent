@@ -105,6 +105,8 @@ function opaRequest(url, ws) {
     case "userSearch":
       userSearch(paramObject, ws);
       break;
+    case "addFriend":
+      addFriend(paramObject, ws);
     default:
       ws.send("请求地址不存在");
       break;
@@ -220,9 +222,9 @@ function userSearch(paramObject, ws) {
           resMsg: "操作成功",
           data: {
             user: {
-              nickName:result[0].nick_name,
-              username:result[0].username,
-              userId:result[0].id
+              nickName: result[0].nick_name,
+              username: result[0].username,
+              userId: result[0].id
             }
           }
         };
@@ -242,13 +244,90 @@ function userSearch(paramObject, ws) {
  * @param {*} paramObject
  * @param {*} ws
  */
-function addFriend(paramObject, ws) {}
+function addFriend(paramObject, ws) {
+  var friendsStr = "";
+
+  //查找对应的好友列表
+  //建立连接
+  connection = mysql.createConnection({
+    host: "localhost",
+    user: "root",
+    password: "cc123456",
+    database: "tecent"
+  });
+
+  connection.beginTransaction(function(err) {
+    connection.query(
+      `select * from biz_user where id="${paramObject.userId}"`,
+      function(err, result) {
+        if (err) {
+          console.log(err);
+          return;
+        }
+
+        if (result.length > 0) {
+          var friends = JSON.parse(result[0].friends);
+          console.log("----------获取到好友数组---------------" + friends);
+          console.log(friends);
+          friends.push(parseInt(paramObject.friendId));
+          console.log(friends);
+        }
+
+        friendsStr = JSON.stringify(friends);
+        console.log(friendsStr);
+
+        if (!friendsStr) {
+          var data = {
+            resCode: 1111,
+            resMsg: "操作失败"
+          };
+          ws.send(JSON.stringify(data));
+          return;
+        }
+      }
+    );
+    setTimeout(function() {
+      var sql = `update biz_user set friends="${friendsStr}" where id="${paramObject.userId}"`;
+      connection.query(sql, function(err, result) {
+        if (err) {
+          var data = {
+            resCode: 5000,
+            resMsg: "服务器错误"
+          };
+          console.log(err);
+          ws.send(JSON.stringify(data));
+          return;
+        }
+        if (result.affectedRows > 0) {
+          //受影响行数大于1
+          var data = {
+            resCode: 0000,
+            resMsg: "操作成功"
+          };
+        } else {
+          var data = {
+            resCode: 1111,
+            resMsg: "操作失败"
+          };
+        }
+        ws.send(JSON.stringify(data));
+      });
+      // 提交事务
+      connection.commit(function(err) {
+        if (err) {
+          connection.rollback(function() {
+            throw err;
+          });
+        }
+        console.log("success!");
+      });
+    }, 100);
+  });
+}
 
 /**
  * 发消息接口
- * @param {*} paramObject 
- * @param {*} ws 
+ * @param {*} paramObject
+ * @param {*} ws
  */
-function sendMessage(paramObject,ws){
-
-}
+function sendMessage(paramObject, ws) {}
