@@ -331,3 +331,18 @@ function addFriend(paramObject, ws) {
  * @param {*} ws
  */
 function sendMessage(paramObject, ws) {}
+
+/**
+ * 好友列表
+ * @param {*} paramObject 
+ * @param {*} ws 
+ */
+function friendList(paramObject,ws){
+  var userId = paramObject.userId;
+  connection.beginTransaction(function(err){
+    if(err){
+      console.log(err);
+      return;
+    }
+  })
+}
